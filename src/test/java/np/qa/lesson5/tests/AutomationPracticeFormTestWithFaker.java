@@ -21,12 +21,12 @@ public class AutomationPracticeFormTestWithFaker extends TestBase {
                 .setUserNumber(Integer.parseInt(number))
                 .calendarComponent.setDate(1991, "July", 1);
 
-        registrationFormPage.setSubject("i")
+        registrationFormPage.setSubject("Hindi")
                 .setHobbies("Sports")
                 .uploadFile("src/test/resources/scale_1200.jpg")
                 .setAddress(address)
-                .setState("t")
-                .setCity("a");
+                .setState("Uttar")
+                .setCity("Agra");
 
         $("#submit").click();
 
