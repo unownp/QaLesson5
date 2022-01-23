@@ -69,7 +69,7 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setUserNumber(Integer phone) {
+    public RegistrationFormPage setUserNumber(Long phone) {
         userNumberInput.setValue(phone.toString());
 
         return this;

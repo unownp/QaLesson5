@@ -24,7 +24,7 @@ public class AutomationPracticeFormTest extends TestBase {
                 .setLastName("Pyshpysh")
                 .setEmail("realne@chake.com")
                 .setGender("Male")
-                .setUserNumber(1234567890)
+                .setUserNumber(1234567890L)
                 .calendarComponent.setDate(1991, "July", 1);
 
         registrationFormPage.setSubject("Hindi")

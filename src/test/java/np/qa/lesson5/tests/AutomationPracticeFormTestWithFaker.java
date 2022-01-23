@@ -17,16 +17,16 @@ public class AutomationPracticeFormTestWithFaker extends TestBase {
                 .setFirstName((firstName))
                 .setLastName(lastName)
                 .setEmail(email)
-                .setGender("Male")
-                .setUserNumber(Integer.parseInt(number))
-                .calendarComponent.setDate(1991, "July", 1);
+                .setGender(gender)
+                .setUserNumber(Long.parseLong(number))
+                .calendarComponent.setDate(year, month, day);
 
-        registrationFormPage.setSubject("Hindi")
-                .setHobbies("Sports")
+        registrationFormPage.setSubject(subject)
+                .setHobbies(hobby)
                 .uploadFile("src/test/resources/scale_1200.jpg")
                 .setAddress(address)
-                .setState("Uttar")
-                .setCity("Agra");
+                .setState(state)
+                .setCity(city);
 
         $("#submit").click();
 
@@ -37,11 +37,11 @@ public class AutomationPracticeFormTestWithFaker extends TestBase {
     void checkTable() {
         $("#example-modal-sizes-title-lg").shouldBe(visible);
         $(".table-responsive").shouldHave(text(firstName), text(lastName), text(email),
-                text("Male"), text(number),
-                text("01 July,1991"),
-                text("Hindi"), text("Sports"),
+                text(gender), text(number),
+                text(day+" "+month+","+year),
+                text(subject), text(hobby),
                 text("scale_1200.jpg"), text(address),
-                text("Uttar Pradesh Agra"));
+                text(state+" "+city));
 
     }
 }
